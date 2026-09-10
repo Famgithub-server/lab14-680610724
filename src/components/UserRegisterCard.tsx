@@ -12,7 +12,7 @@ export default function UserRegisterCard({ registrant }: { registrant: Registran
 
   const formatItem = (item: string) => {
     if (itemMap[item]) return itemMap[item];
-    return item.replace(/\s*\(\d+.*?\)/, "").trim();
+    return "";
   };
 
   return (
