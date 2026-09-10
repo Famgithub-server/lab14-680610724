@@ -63,7 +63,7 @@ export default function ModalRegister({ onClose }: { onClose: () => void }) {
   const computeTotalPayment = () => {
     let total = 0;
 
-    const selectedPlan = plans.find((p) => p.id === form.plan);
+    const selectedPlan = plans.find((p) => p.label === form.plan);
     if (selectedPlan) total += selectedPlan.price;
 
     let itemsPrice = form.items.reduce((sum, itemId) => {
@@ -162,7 +162,7 @@ export default function ModalRegister({ onClose }: { onClose: () => void }) {
                 >
                   <option value="">Please select..</option>
                   {plans.map((p) => (
-                    <option key={p.id} value={p.id}>
+                    <option key={p.id} value={p.label}>
                       {p.label} ({p.price.toLocaleString()} THB)
                     </option>
                   ))}
