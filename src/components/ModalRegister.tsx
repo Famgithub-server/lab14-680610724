@@ -93,7 +93,7 @@ export default function ModalRegister({ onClose }: { onClose: () => void }) {
     const total = computeTotalPayment();
 
     const newItem = {
-      id: Date.now().toString(),
+      id: Date.now(),
       fullName: form.fname + form.lname,
       plan: form.plan,
       gender: form.gender,
